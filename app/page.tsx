@@ -4,8 +4,8 @@ import BarChart from "./charts/BarChart";
 export default function Home() {
   const transformedPlayerData = playerData.map(player => ({
     player: player.player,
-    goals: player.goals - player.penalties, 
-    'goals(p)': player.penalties, 
+    gols: player.gols - player.penalties, 
+    'gols(p)': player.penalties, 
     assists: player.assists,
   }));
 
@@ -15,7 +15,7 @@ export default function Home() {
       <BarChart 
         chartLabel="Top Scorers Goals Stats 23/24 Season"
         data={transformedPlayerData} 
-        keys={['goals(p)','goals','assists']} 
+        keys={['gols(p)','gols','assists']} 
       />
     </main>
   );
